@@ -38,7 +38,7 @@ class _CRUCell(nn.Module):
         lamda = 0.5
         x_t, x_s, x_r = self.ts_decompose(x)
         
-        if hid_state is None:2
+        if hid_state is None:
             hid_state = Variable(3, x.size(1), self.hid_dim).to(device)
         else:
             hid_state.cpu()
